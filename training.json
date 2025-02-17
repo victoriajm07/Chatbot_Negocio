@@ -1,0 +1,92 @@
+{
+  "intents": [
+    {
+      "tags": "reservas",
+      "patterns": [
+        "hacer_reserva"
+      ],
+      "responses": [
+        "Quiero reservar una mesa para dos personas a las 8 pm",
+        "Me gustaría hacer una reserva para 4 personas mañana a las 7 pm",
+        "¿Tienen disponibilidad para esta noche a las 9?",
+        "Reserva para cinco personas el viernes a las 20:00 horas",
+        "Necesito una mesa para 3 el sábado a las 2 de la tarde"
+      ],
+      "entities": [
+        "fecha",
+        "hora",
+        "numero_personas"
+      ]
+    },
+    {
+      "tags": "modificar",
+      "patterns": [
+        "modificar_reserva"
+      ],
+      "responses": [
+        "Quisiera cambiar mi reserva de las 8 pm a las 9 pm",
+        "¿Puedo modificar mi reserva para dos personas a cuatro?",
+        "Necesito cambiar la fecha de mi reserva para el próximo viernes",
+        "¿Se puede adelantar mi reserva de las 9 a las 7?",
+        "Cambio de horario en mi reserva de hoy a las 10 pm"
+      ],
+      "entities": [
+        "nueva_fecha",
+        "nueva_hora",
+        "nuevo_numero_personas"
+      ]
+    },
+    {
+      "tags": "cancelar",
+      "patterns": [
+        "cancelar_reserva"
+      ],
+      "responses": [
+        "Voy a cancelar mi reserva de esta noche",
+        "¿Puedo anular mi reserva para mañana?",
+        "Quisiera cancelar la reserva que hice para el sábado",
+        "Cancela la mesa que reservé para 4 personas",
+        "No podré ir, necesito cancelar mi reserva"
+      ],
+      "entities": [
+        "fecha",
+        "hora",
+        "numero_personas"
+      ]
+    },
+    {
+      "tags": "disponibilidad",
+      "patterns": [
+        "consultar_disponibilidad"
+      ],
+      "responses": [
+        "¿Hay mesas disponibles para esta noche?",
+        "¿Tienen lugar para 6 personas a las 7 pm?",
+        "Quisiera saber si hay disponibilidad para una cena a las 9",
+        "¿Puedo reservar una mesa para este sábado a las 8?",
+        "¿A qué hora tienen disponibilidad para dos personas?"
+      ],
+      "entities": [
+        "fecha",
+        "hora",
+        "numero_personas"
+      ]
+    },
+    {
+      "tags": "información",
+      "patterns": [
+        "informacion_restaurante"
+      ],
+      "responses": [
+        "¿Cuál es la dirección del restaurante?",
+        "¿Qué tipo de comida sirven?",
+        "¿Cuáles son los horarios de atención?",
+        "¿Tienen opciones vegetarianas en el menú?",
+        "¿Aceptan pagos con tarjeta?"
+      ],
+      "entities": [
+        "informacion_solicitada"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+# Archivos de Python compilados
+*.pyc
+*.pyo
+*.pyd
+node_modules
+# Ignorar entornos virtuales
+.bin/
+pyvenv.cfg
+
+# Ignorar dependencias y librerías
+*.whl
+*.dist-info/
+*.egg-info/
+__pycache__/
+Lib/
+bin/
+Scripts/
+include/
+
+# Archivos de configuración de entorno
+.DS_Store
+*.log
+
+# Archivos grandes y generados automáticamente
+words.pkl
+classes.pkl
+chatbot_model.h5
+
+# Configuraciones de IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos de dependencias
+Pipfile
+Pipfile.lock
+
+# Archivos de configuración innecesarios
+*.cfg
+*.log
+*.map
+*.js
+package-lock.json
+pydeck.json
