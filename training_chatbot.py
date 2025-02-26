@@ -13,8 +13,8 @@ nltk.download('punkt_tab')
 nltk.download('wordnet')
 
 # Cargar el archivo JSON
-with open("training.json", "r", encoding="utf-8") as file:
-    intents = json.load(file)
+data_file = open('training.json', 'r', encoding='utf-8').read()
+intents = json.loads(data_file)
 
 lemmatizer = WordNetLemmatizer()
 

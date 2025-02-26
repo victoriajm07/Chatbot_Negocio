@@ -1,4 +1,5 @@
 import streamlit as st
+from app import predict_class, get_response, intents
 
 st.title ("Asistente virtual")
 
@@ -26,6 +27,10 @@ if prompt := st.chat_input("¿Cómo puedo ayudarte?"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
 
+    # Implementación del algoritmo IA
+    insts = predict_class(prompt)
+    res = get_response(insts, intents)
+
     with st.chat_message("assistant"):
-        st.markdown(prompt)
-    st.session_state.messages.append({"role": "assistant", "content": prompt})
+        st.markdown(res)
+    st.session_state.messages.append({"role": "assistant", "content": res})
